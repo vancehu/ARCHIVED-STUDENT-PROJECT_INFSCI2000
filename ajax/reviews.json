@@ -1,0 +1,83 @@
+{
+    "reviews": [
+        {
+            "avatarSrc": "resource/placeholder.svg",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur obcaecati doloribus deserunt iure hic, neque mollitia nobis veniam, quos voluptate corrupti molestias ea laudantium dolorum eius ex cupiditate porro, repudiandae!",
+            "con": "20",
+            "date": "2014/10/10",
+            "myCon": "false",
+            "myPro": "true",
+            "pro": "15",
+            "rate": "3",
+            "replies": [
+                {
+                    "avatarSrc": "resource/placeholder.svg",
+                    "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut non libero pariatur quis, ab officia accusantium similique cumque esse, soluta nobis modi adipisci, corporis, ipsa tenetur optio ratione reiciendis sunt.",
+                    "date": "2014/10/12",
+                    "userName": "Tester3"
+                }
+            ],
+            "reviewId": "4221",
+            "tagTerm": "Fall",
+            "tagYear": "2014",
+            "userName": "Tester1"
+        },
+        {
+            "avatarSrc": "resource/placeholder.svg",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius optio, veritatis eum doloribus vitae ut praesentium reprehenderit. Dicta excepturi, fuga adipisci aliquam, corporis aut molestiae illo quam distinctio rerum dolorum.",
+            "con": "16",
+            "date": "2014/9/14",
+            "myCon": "true",
+            "myPro": "false",
+            "pro": "12",
+            "rate": "5",
+            "reviewId": "4222",
+            "tagTerm": "Fall",
+            "tagYear": "2014",
+            "userName": "Tester2"
+        },
+        {
+            "avatarSrc": "resource/placeholder.svg",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur obcaecati doloribus deserunt iure hic, neque mollitia nobis veniam, quos voluptate corrupti molestias ea laudantium dolorum eius ex cupiditate porro, repudiandae!",
+            "con": "10",
+            "date": "2014/9/1",
+            "myCon": "true",
+            "myPro": "false",
+            "pro": "8",
+            "rate": "2",
+            "reviewId": "4211",
+            "tagTerm": "Fall",
+            "tagYear": "2014",
+            "userName": "Tester3"
+        },
+        {
+            "avatarSrc": "resource/placeholder.svg",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur obcaecati doloribus deserunt iure hic, neque mollitia nobis veniam, quos voluptate corrupti molestias ea laudantium dolorum eius ex cupiditate porro, repudiandae!",
+            "con": "7",
+            "date": "2014/6/10",
+            "myCon": "false",
+            "myPro": "false",
+            "pro": "15",
+            "rate": "1",
+            "reviewId": "4111",
+            "tagTerm": "Fall",
+            "tagYear": "2014",
+            "userName": "Tester4"
+        },
+        {
+            "avatarSrc": "resource/placeholder.svg",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur obcaecati doloribus deserunt iure hic, neque mollitia nobis veniam, quos voluptate corrupti molestias ea laudantium dolorum eius ex cupiditate porro, repudiandae!",
+            "con": "2",
+            "date": "2014/5/6",
+            "myCon": "false",
+            "myPro": "false",
+            "pro": "21",
+            "rate": "3",
+            "reviewId": "1221",
+            "tagTerm": "Fall",
+            "tagYear": "2014",
+            "userName": "Tester5"
+        }
+    ],
+    "reviewsCount": "22"
+}

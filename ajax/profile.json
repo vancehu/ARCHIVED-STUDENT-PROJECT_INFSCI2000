@@ -1,0 +1,17 @@
+{
+    "credit": "100",
+    "email": "tester@test.com",
+    "history": [
+        {
+            "course": "INFSCI2300",
+            "date": "08/01/2014",
+            "description": "Posted a review"
+        },
+        {
+            "course": "INFSCI2300",
+            "date": "08/03/2014",
+            "description": "wjirjidjod"
+        }
+    ],
+    "username": "tester1"
+}

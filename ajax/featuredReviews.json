@@ -1,0 +1,39 @@
+{
+    "reviews": [
+        {
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur obcaecati doloribus deserunt iure hic, neque mollitia nobis veniam, quos voluptate corrupti molestias ea laudantium dolorum eius ex cupiditate porro, repudiandae!",
+            "courseName": "INFSCI 2350 HUMAN FACTOR",
+            "courseLink": "#",
+            "date": "2014/10/10",
+            "userName": "Tester1"
+        },
+        {
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus magni officiis dolore deleniti perspiciatis exercitationem iste quae et, quidem ex harum, nam veritatis labore necessitatibus. Atque distinctio assumenda, sed suscipit!",
+            "courseName": "INFSCI 2350 HUMAN FACTOR",
+            "courseLink": "#",
+            "date": "2014/10/10",
+            "userName": "Tester2"
+        },
+        {
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident accusantium, distinctio soluta culpa enim consectetur! Expedita debitis cumque mollitia, placeat, eligendi quidem dignissimos molestias illum recusandae, ipsa aliquam nesciunt assumenda.",
+            "courseName": "INFSCI 2350 HUMAN FACTOR",
+            "courseLink": "#",
+            "date": "2014/10/10",
+            "userName": "Tester3"
+        },
+        {
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa necessitatibus nisi maiores fugiat reprehenderit vel consequatur, odio officiis sequi accusantium aliquid error ullam quo incidunt magnam dolores at eius alias.",
+            "courseName": "INFSCI 2350 HUMAN FACTOR",
+            "courseLink": "#",
+            "date": "2014/10/10",
+            "userName": "Tester4"
+        },
+        {
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex numquam quam similique blanditiis suscipit, dolorum odit vero eos illum voluptas consequatur doloribus assumenda, neque aperiam, aspernatur? Assumenda cum dolor aliquam.",
+            "courseName": "INFSCI 2350 HUMAN FACTOR",
+            "courseLink": "#",
+            "date": "2014/10/10",
+            "userName": "Tester5"
+        }
+    ]
+}

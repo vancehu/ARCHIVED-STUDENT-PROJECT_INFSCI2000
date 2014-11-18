@@ -1,0 +1,108 @@
+{
+    "catalogs": [
+        {
+            "catalogIcon": "resource/placeholder.svg",
+            "catalogName": "Foundation",
+            "courses": [
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Factor in System",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "catalogIcon": "resource/placeholder.svg",
+            "catalogName": "Professional",
+            "courses": [
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Factor in System",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "catalogIcon": "resource/placeholder.svg",
+            "catalogName": "Cognitive Science",
+            "courses": [
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Factor in System",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "catalogIcon": "resource/placeholder.svg",
+            "catalogName": "Cognitive Science & Systems",
+            "courses": [
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Factor in System",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "catalogIcon": "resource/placeholder.svg",
+            "catalogName": "System & Technologies",
+            "courses": [
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Factor in System",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "catalogIcon": "resource/placeholder.svg",
+            "catalogName": "Independent",
+            "courses": [
+                {
+                    "courseName": "Human Information Processing",
+                    "link": "#"
+                },
+                {
+                    "courseName": "Human Factor in System",
+                    "link": "#"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="signup" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	
+	<!--import libraries -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/module/signup.js"></script>
+	<script src="js/module/currentUser.js"></script>
+	
+</head>
+<body>
+	<!-- navbar -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="collapse navbar-collapse">
+			<ul ng-controller="CurrentUserController as userCtrl" class="nav navbar-nav">
+				<li class="active"><a href="home.html">Home</a></li>
+				<ol class="breadcrumb">
+					<li><a href="#">INFSCI2300</a></li>
+					<li class="active">Spring 2014</li>
+				</ol>
+				<div style="display:inline-block" class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="resource/placeholder.svg" alt="" width="64" height="64" class="img-circle"/>
+					</a>
+				</div>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+				</form>
+				<!-- user information when signed in  -->
+				<li ng-hide="userCtrl.isSignedIn()"><a href="signin.html">Sign in</a></li>
+				<!-- sign in link when not signed in -->
+				<li ng-show="userCtrl.isSignedIn()" class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> {{userCtrl.currentUser.userName}}<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="profile.html">Profile</a></li>
+						<li><a href="" ng-click="userCtrl.logOut()">Log out</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="collapse navbar-collapse">
+			<ul ng-controller="CurrentUserController as userCtrl" class="nav navbar-nav">
+				<li><a href="courses.html">Courses</a></li>
+				<li><a href="resource.html">Resource</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div ng-controller="SignUpController as signCtrl">
+	<blockquote>Sign up</blockquote>
+	<div ng-show="signCtrl.isError()" class="alert alert-danger" role="alert">{{signCtrl.response.statusInfo}}</div>
+	<form role="form" method="post">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input ng-model="signCtrl.email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">Username (Real name is preferred)</label>
+			<input ng-model="signCtrl.username" class="form-control" id="exampleInputEmail1" placeholder="Enter username">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Password</label>
+			<input ng-model="signCtrl.password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword2">Re-enter Password</label>
+			<input ng-model="signCtrl.password2" type="password" class="form-control" id="exampleInputPassword2" placeholder="Re-enter Password">
+		</div>
+
+		<button ng-click="signCtrl.request()" ng-disabled="signCtrl.isNotValid()" type="submit" class="btn btn-default">Sign up</button>
+	</form>
+	<a href="signin.html">Already have an account?</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="profile" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Course</title>
+	
+	<!--import libraries -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/module/profile.js"></script>
+	<script src="js/module/currentUser.js"></script>
+	
+</head>
+<body>
+	<!-- navbar -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="collapse navbar-collapse">
+			<ul ng-controller="CurrentUserController as userCtrl" class="nav navbar-nav">
+				<li class="active"><a href="home.html">Home</a></li>
+				<ol class="breadcrumb">
+					<li><a href="#">INFSCI2300</a></li>
+					<li class="active">Spring 2014</li>
+				</ol>
+				<div style="display:inline-block" class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="resource/placeholder.svg" alt="" width="64" height="64" class="img-circle"/>
+					</a>
+				</div>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+				</form>
+				<!-- user information when signed in  -->
+				<li ng-hide="userCtrl.isSignedIn()"><a href="signin.html">Sign in</a></li>
+				<!-- sign in link when not signed in -->
+				<li ng-show="userCtrl.isSignedIn()" class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> {{userCtrl.currentUser.userName}}<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="profile.html">Profile</a></li>
+						<li><a href="" ng-click="userCtrl.logOut()">Log out</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="collapse navbar-collapse">
+			<ul ng-controller="CurrentUserController as userCtrl" class="nav navbar-nav">
+				<li><a href="courses.html">Courses</a></li>
+				<li><a href="resource.html">Resource</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- course description -->
+
+	<div ng-controller="ProfileController as profileCtrl">
+		<blockquote>
+			<h1>{{profileCtrl.username}}</h1>
+			<p>{{profileCtrl.email}}</p>
+			<p>{{profileCtrl.credit}}</p>
+		</blockquote>
+		<blockquote>
+			<h1>History</h1>
+			<table class="table">	
+			<tr ng-repeat="entry in profileCtrl.history">
+					<td>{{entry.date}}</td>
+					<td>{{entry.course}}</td>
+					<td>{{entry.description}}</td>
+				</tr></table>
+			</blockquote>
+		</div>
+
+	</body>
+	</html>

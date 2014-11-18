@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="home" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	
+	<!--import libraries -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/module/home.js"></script>
+	<script src="js/module/currentUser.js"></script>
+	
+</head>
+<body>
+	<!-- navbar -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="collapse navbar-collapse">
+			<ul ng-controller="CurrentUserController as userCtrl" class="nav navbar-nav">
+				<li class="active"><a href="home.html">Home</a></li>
+				<ol class="breadcrumb">
+					<li><a href="#">INFSCI2300</a></li>
+					<li class="active">Spring 2014</li>
+				</ol>
+				<div style="display:inline-block" class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="resource/placeholder.svg" alt="" width="64" height="64" class="img-circle"/>
+					</a>
+				</div>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+				</form>
+				<!-- user information when signed in  -->
+				<li ng-hide="userCtrl.isSignedIn()"><a href="signin.html">Sign in</a></li>
+				<!-- sign in link when not signed in -->
+				<li ng-show="userCtrl.isSignedIn()" class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> {{userCtrl.currentUser.userName}}<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="profile.html">Profile</a></li>
+						<li><a href="" ng-click="userCtrl.logOut()">Log out</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="collapse navbar-collapse">
+			<ul ng-controller="CurrentUserController as userCtrl" class="nav navbar-nav">
+				<li><a href="courses.html">Courses</a></li>
+				<li><a href="resource.html">Resource</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- featured reviews -->
+	<div ng-controller="IndicatorController as indiCtrl">
+		<div ng-controller="FeaturedReviewController as reviewCtrl"  >
+			<div ng-repeat="review in reviewCtrl.reviews" ng-show="indiCtrl.isCurrent($index)" class="panel panel-default">
+				<blockquote>
+					<p>{{review.body}}</p>
+					<footer>By {{review.userName}} {{review.date}} reviewing <a href="{{review.courseLink}}">{{review.courseName}}</a></footer>
+				</blockquote>
+			</div>
+		</div>
+		<ol class="carousel-indicators">
+			<li ng-repeat="n in []| range:5" ng-click="indiCtrl.setCurrent($index)" ng-class="{active: indiCtrl.isCurrent($index)}"></li>
+		</ol>
+	</div>
+	<!-- course and popup menu -->
+	<div ng-controller="PopupController as popupCtrl">
+		<div style="display:inline-block">
+			<table>
+				<tr>
+					<td ng-repeat="catalog in popupCtrl.catalogs"><img ng-src="{{catalog.catalogIcon}}" alt="" width="160" height="160" class="img-rounded"/>
+						<p>{{catalog.catalogName}}</p>
+						<button ng-click="popupCtrl.setPopup($index)">More</button>
+					</td>
+				</table>
+			</div>
+			<div class="list-group" style="float:right" ng-show="popupCtrl.showFlag">
+				<a ng-repeat="course in popupCtrl.popup" href="{{course.link}}" class="list-group-item">{{course.courseName}}</a>
+			</div>
+		</div>
+	</body>
+	</html>

@@ -1,0 +1,19 @@
+{
+    "courseName": "INFSCI2300 HUMAN FACTOR",
+    "resources": [
+        {
+            "resourceName": "Personal notes",
+            "userName": "Tester1",
+            "resourceId": "3512"
+        },
+        {
+            "resourceName": "Personal wnotes",
+            "userName": "Tester2",
+            "resourceId": "3522"
+        },
+        {
+            "resourceName": "Personarl notes",
+            "userName": "Tester3",
+            "resourceId": "3521"
+        }]
+}
